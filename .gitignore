@@ -6,3 +6,4 @@ __pycache__
 airflow.cfg
 profiles.yml
 docker-compose.yml
+victor-ezeh-elt-data-pipeline.mp4

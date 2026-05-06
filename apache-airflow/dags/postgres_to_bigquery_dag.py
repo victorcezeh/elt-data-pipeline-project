@@ -62,7 +62,7 @@ with DAG(
         )
 
         # Load the schema from the JSON file
-        schema_file_path = f"/mnt/c/Users/Victor/Desktop/de-capstone-project/apache-airflow/schemas/{table['bq_table']}.json"
+        schema_file_path = f"/mnt/c/Users/Victor/Desktop/Projects/de-capstone-project/apache-airflow/schemas/{table['bq_table']}.json"
         try:
             with open(schema_file_path, "r") as schema_file:
                 schema = json.load(schema_file)
