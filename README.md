@@ -1,4 +1,4 @@
-# 🛒 E-Commerce ELT Project
+# 🛒 E-Commerce ELT Data Pipeline Project
 
 ---
 
