@@ -1,39 +1,39 @@
-# E-Commerce ELT Project
+# 🛒 E-Commerce ELT Project
 
 ---
 
 ## Table of Contents
-1. [Overview](#1-overview)
-2. [ELT Pipeline Architecture](#2-elt-pipeline-architecture)
-3. [Project Structure](#3-project-structure)
-4. [Prerequisites](#4-prerequisites)
-5. [Setup](#5-setup)
+1. [Overview](#1--overview)
+2. [ELT Pipeline Architecture](#2--elt-pipeline-architecture)
+3. [Project Structure](#3--project-structure)
+4. [Prerequisites](#4--prerequisites)
+5. [Setup](#5--setup)
    - [5.1 PostgreSQL Setup with Docker](#51-postgresql-setup-with-docker)
    - [5.2 PostgreSQL Data Ingestion](#52-postgresql-data-ingestion)
    - [5.3 Apache Airflow Setup](#53-apache-airflow-setup)
    - [5.4 dbt Setup](#54-dbt-setup)
    - [5.5 Analysis](#55-analysis)
-6. [Explanation of Each dbt Model](#6-explanation-of-each-dbt-model)
+6. [Explanation of Each dbt Model](#6--explanation-of-each-dbt-model)
    - [6.1 Staging Models](#61-staging-models)
    - [6.2 Intermediate Models](#62-intermediate-models)
    - [6.3 Final Models](#63-final-models)
-7. [License](#7-license)
-8. [Contact](#8-contact)
-9. [Contributing](#9-contributing)
-10. [Acknowledgements](#10-acknowledgements)
+7. [License](#7--license)
+8. [Contact](#8--contact)
+9. [Contributing](#9--contributing)
+10. [Acknowledgements](#10--acknowledgements)
    
 ---
 
-## 1. Overview
+## 1. 📌 Overview
 
 This project demonstrates an end-to-end ELT (Extract, Load, Transform) process using a Brazilian E-Commerce dataset from Kaggle. The project involves data ingestion into PostgreSQL, orchestration with Apache Airflow, data transformation and modeling with dbt, and loading the transformed data into Google BigQuery. Dataset: [Brazilian E-Commerce Dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce).
 
 
-## 2. ELT Pipeline Architecture
+## 2. 🏗 ELT Pipeline Architecture
 
 ![ELT ARCHITECTURE](https://github.com/user-attachments/assets/964a6b4c-9dd1-4164-8faa-14ad2248c101)
 
-## 3. Project Structure
+## 3. 📁 Project Structure
 
 - **PostgreSQL Scripts**: SQL scripts for creating tables and ingesting data.
 - **Airflow DAG**: Orchestrates the ETL process from PostgreSQL to BigQuery.
@@ -41,14 +41,14 @@ This project demonstrates an end-to-end ELT (Extract, Load, Transform) process u
 - **Analysis**: SQL queries to answer key analytical questions.
 - **Docker Compose File**: Configurations for setting up PostgreSQL with Docker.
 
-## 4. Prerequisites
+## 4. ✅ Prerequisites
 
 1. **Docker & Docker Compose**: For containerizing PostgreSQL.
 2. **Apache Airflow**: For orchestrating the ETL process.
 3. **dbt**: For transforming and modeling the data.
 4. **Google Cloud Platform Account**: For using BigQuery and Cloud Storage.
 
-## 5. Setup
+## 5. ⚙ Setup
 
 ### 5.1 PostgreSQL Setup with Docker
 
@@ -143,7 +143,7 @@ Make sure to replace `<YOUR_POSTGRES_USER>` with your actual PostgreSQL username
    - `average_delivery_time_for_orders.sql`: Calculates average delivery time for orders.
   
 
-### Top 5 Product Categories by Sales
+### 📊 Top 5 Product Categories by Sales
 
 The query was executed to identify the top 5 product categories by total sales from the `fct_sales_by_category` table. The result shows the following product categories:
 
@@ -155,7 +155,7 @@ The query was executed to identify the top 5 product categories by total sales f
 
 These categories represent the highest sales volumes in the dataset, with the Health & Beauty category leading the list. The sales figures are represented in the local currency with high precision, highlighting the significant contribution of each category to the overall sales.
 
-### Delivery Time Metrics
+### 🚚 Delivery Time Metrics
 
 The query was executed to calculate the average, minimum, and maximum delivery times in days from the `fct_avg_delivery_time` table. The result provides insights into the overall delivery performance:
 
@@ -165,7 +165,7 @@ The query was executed to calculate the average, minimum, and maximum delivery t
 
 The data reveals that, on average, deliveries take approximately 12 days to reach customers. However, the delivery time varies significantly, ranging from same-day delivery (0 days) to an extreme of 209 days. This wide range indicates a mix of efficient and delayed deliveries within the dataset.
 
-### Top 5 States by Number of Orders
+### 🗺️ Top 5 States by Number of Orders
 
 The query was run to determine the top 5 states in Brazil by the number of customer orders, along with their respective rankings. The result is as follows:
 
@@ -178,10 +178,10 @@ The query was run to determine the top 5 states in Brazil by the number of custo
 This ranking highlights that São Paulo (SP) significantly leads in the number of orders, followed by Rio de Janeiro (RJ) and Minas Gerais (MG). The concentration of orders in these states may reflect their larger population sizes and economic activity within Brazil.
 
 
-## Brazilian E-commerce Dashboard
+## 📈 Brazilian E-commerce Dashboard
 ![BRAZILIAN E-COMMERCE INSIGHTS](https://github.com/user-attachments/assets/70157b96-5dda-42aa-8cbf-d8260191cc1a)
 
-## 6. Explanation of Each dbt Model
+## 6. 🧩 Explanation of Each dbt Model
 
 ### 6.1 Staging Models
 
@@ -203,20 +203,20 @@ This ranking highlights that São Paulo (SP) significantly leads in the number o
 - **fct_orders_by_state.sql**: Ranks states by order count.
 - **fct_sales_by_category.sql**: Ranks product categories by sales.
 
-## 7. License
+## 7. 📄 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## 8. Contact
+## 8. 📬 Contact
 
 If you have any questions, feedback, or concerns, don't hesitate to reach out:
 - **Instructor**: [Emmanuel Ogunwede](https://github.com/JesuFemi-O)
 - **Student**: [Victor Ezeh](https://linktr.ee/victorcezeh)
 
-## 9. Contributing
+## 9. 🤝 Contributing
 Collaboration drives innovation in data engineering. If you have suggestions, improvements, or new ideas to contribute, we welcome your input. Simply fork this repository, implement your changes, and submit a pull request. Your contributions are invaluable and greatly appreciated!
 
-## 10. Acknowledgements
+## 10. 🙏 Acknowledgements
 
 I owe a special thanks to [Altschool Africa](https://altschoolafrica.com/) and [Emmanuel Ogunwede](https://github.com/JesuFemi-O) for their unwavering support and invaluable expertise, which were vital to the success of this project. Their contributions made all the difference.
 
